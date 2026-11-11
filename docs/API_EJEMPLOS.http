@@ -1,0 +1,50 @@
+@base = http://localhost:3000
+
+### Health
+GET {{base}}/api/health
+
+### Categorías
+GET {{base}}/api/categorias
+
+### Productos
+GET {{base}}/api/productos?categoria=iluminacion
+
+### Crear nota (Laboratorio 5)
+POST {{base}}/api/notas
+Content-Type: application/json
+
+{"titulo":"Resumen semanal","contenido":"Revisar inventario, ajustar catálogo y verificar las solicitudes."}
+
+### Notas
+GET {{base}}/api/notas
+
+### Pregunta a Claude (necesita API key)
+POST {{base}}/api/ia/preguntar
+Content-Type: application/json
+
+{"pregunta":"¿Qué es una lámpara LED de espectro completo para horticultura?"}
+
+### Resumen de nota 1 (necesita API key)
+POST {{base}}/api/notas/1/resumen
+
+### Solicitud de pedido — sustituir productoId por uno del catálogo
+POST {{base}}/api/pedidos
+Content-Type: application/json
+Idempotency-Key: ejemplo-pedido-unico-2026
+
+{"nombre":"Cliente Ejemplo","email":"ejemplo@example.org","telefono":"88888888","provincia":"San José","direccion":"Centro, local número 11","items":[{"productoId":1,"cantidad":1}]}
+
+### Seguir pedido (sustituir código)
+POST {{base}}/api/pedidos/consultar
+Content-Type: application/json
+
+{"codigo":"GL-REEMPLAZAR","email":"ejemplo@example.org"}
+
+### Login administrador (configurar password en .env)
+POST {{base}}/api/admin/login
+Content-Type: application/json
+
+{"password":"REEMPLAZAR_PASSWORD_LOCAL"}
+
+### Estadísticas (requiere cookie adquirida en login)
+GET {{base}}/api/admin/stats

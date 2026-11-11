@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="650" height="590" viewBox="0 0 650 590" role="img"><defs>
+ <linearGradient id="metal" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fdfefa"/><stop offset=".48" stop-color="#a7b8ab"/><stop offset="1" stop-color="#476e55"/></linearGradient>
+ <linearGradient id="dark" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#466a4e"/><stop offset=".47" stop-color="#254b32"/><stop offset="1" stop-color="#112b20"/></linearGradient>
+ <linearGradient id="charcoal" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#4d5452"/><stop offset="1" stop-color="#181e1b"/></linearGradient>
+ <linearGradient id="clay" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d5b696"/><stop offset="1" stop-color="#8b6a50"/></linearGradient>
+ <linearGradient id="sand" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#faf4e5"/><stop offset="1" stop-color="#d4d3bd"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dcf0df" stop-opacity=".9"/><stop offset="1" stop-color="#81aa95" stop-opacity=".75"/></linearGradient>
+ <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#eeffba" stop-opacity=".6"/><stop offset="1" stop-color="#f2ffce" stop-opacity="0"/></linearGradient>
+ <filter id="shadow" x="-50%" y="-50%" width="200%" height="250%"><feGaussianBlur stdDeviation="16"/></filter>
+ <filter id="tinyshadow" x="-20%" y="-30%" width="140%" height="170%"><feDropShadow dx="0" dy="9" stdDeviation="8" flood-color="#1c3024" flood-opacity=".26"/></filter>
+ </defs><ellipse cx="325" cy="524" rx="220" ry="29" fill="#344635" opacity=".18" filter="url(#shadow)"/><g filter="url(#tinyshadow)"><rect x="228" y="106" width="189" height="367" rx="32" fill="url(#charcoal)" stroke="#708378" stroke-width="6"/><rect x="250" y="151" width="144" height="118" rx="8" fill="#d7eacc"/><text x="323" y="234" font-family="Arial" font-size="62" font-weight="700" text-anchor="middle" fill="#264436">6.5</text><text x="262" y="178" font-family="Arial" font-size="13" fill="#4c7b52">pH</text><circle cx="323" cy="343" r="33" fill="#a5d378" stroke="#598b60" stroke-width="8"/><path d="M273 410 H370" stroke="#889589" stroke-width="6" stroke-linecap="round"/><path d="M286 435 H358" stroke="#889589" stroke-width="4" stroke-linecap="round"/></g></svg>

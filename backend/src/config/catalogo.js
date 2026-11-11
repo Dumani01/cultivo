@@ -1,0 +1,47 @@
+const categories = [
+  ['kits','Kits completos','PackageOpen'],['iluminacion','Iluminación LED','Sun'],
+  ['carpas','Carpas y clima','Warehouse'],['macetas','Macetas','Sprout'],
+  ['sustratos','Sustratos y abonos','Leaf'],['riego','Riego e hidroponía','Droplets'],
+  ['medicion','Medición y control','Gauge'],['herramientas','Accesorios','Wrench'],
+  ['genetica','Semillas y plantines','Sprout']
+];
+// [slug, nombre, categoría, precio CRC, existencias, etiqueta, descripción, ilustración, destacado]
+// [slug, nombre, categoria, precioCRC, stock, etiqueta, descripcion, imagen, destacado]
+const products = [
+ ['kit-indoor-starter','Kit Indoor Starter','kits',69900,12,'Más vendido','Set hortícola inicial: carpa compacta, luz LED, macetas textiles y accesorios básicos.','kit',1],
+ ['kit-indoor-pro','Kit Indoor Pro 120','kits',189900,6,'Pro','Sistema completo de cultivo de interior con iluminación LED, extracción y medición.','kit',1],
+ ['kit-outdoor-essentials','Kit Outdoor Essentials','kits',34900,19,'Nuevo','Conjunto para jardinería exterior con macetas, sustrato, riego y herramientas.','outdoor',1],
+ ['kit-hidro-modular','Kit Hidro Modular','kits',92900,8,'Modular','Sistema hidropónico de uso hortícola con depósito, accesorios y control inicial.','hydro',0],
+ ['panel-led-150','Panel LED Full Spectrum 150 W','iluminacion',64900,15,'Eficiente','Panel hortícola de espectro completo para plantas de interior; con regulación de intensidad.','light',1],
+ ['barra-led-60','Barra LED Crecimiento 60 W','iluminacion',25900,23,'Compacto','Barra LED de iluminación complementaria para plantas de interior y semilleros.','light',0],
+ ['led-panel-300','Panel LED Full Spectrum 300 W','iluminacion',119900,9,'Pro','Luminaria LED de mayor cobertura para horticultura de interior.','light',0],
+ ['uv-complementaria','Módulo UV complementario','iluminacion',22900,7,'Precaución UV','Iluminación UV especializada, opcional. Requiere medidas de protección ocular y cutánea.','uv',0],
+ ['carpa-80','Carpa Reflectiva 80 × 80','carpas',53900,14,'Indoor','Carpa de cultivo para control ambiental, con paredes reflectivas y accesos de ventilación.','tent',1],
+ ['carpa-120','Carpa Reflectiva 120 × 120','carpas',94900,6,'Espaciosa','Estructura de interior de mayor superficie con aperturas ajustables.','tent',0],
+ ['extractor-4','Extractor Silencioso 4 pulgadas','carpas',28900,20,'Aire fresco','Ventilador de extracción de aire para armarios y espacios de horticultura.','fan',0],
+ ['filtro-carbon-4','Filtro de carbón 4 pulgadas','carpas',35900,11,'Filtración','Filtro de carbón activado para control de olores en sistemas de ventilación.','fan',0],
+ ['maceta-textil-11','Maceta textil 11 L','macetas',3900,50,'Top ventas','Maceta de tela transpirable con asas, ideal para cultivo en sustrato.','pot',1],
+ ['pack-macetas-5','Pack 5 macetas textiles','macetas',16900,25,'Pack ahorro','Cinco macetas de tela reutilizables para macetas de interior y exterior.','pots',0],
+ ['maceta-aire-18','Maceta Air-Prune 18 L','macetas',6900,33,'Drenaje','Contenedor perforado de alta ventilación para plantas ornamentales y huerta.','pot',0],
+ ['bandeja-plantines','Bandeja para plantines 24 celdas','macetas',4900,40,'Germinación','Bandeja para germinar semillas hortícolas autorizadas y criar plantines.','tray',0],
+ ['sustrato-organico','Sustrato orgánico 20 L','sustratos',11900,28,'Orgánico','Mezcla liviana de fibra y materiales orgánicos para jardinería general.','soil',1],
+ ['fibra-coco','Fibra de coco 10 L','sustratos',6900,38,'Aireación','Sustrato de coco para retención controlada de agua y aireación radicular.','soil',0],
+ ['abono-organico','Abono orgánico 1 L','sustratos',9900,29,'Botánico','Nutriente líquido de uso general para jardinería, seguir instrucciones del fabricante.','bottle',0],
+ ['perlita-5','Perlita expandida 5 L','sustratos',4500,36,'Ligera','Enmienda mineral para mejorar drenaje y estructura del sustrato.','soil',0],
+ ['riego-goteo','Kit de riego por goteo','riego',28900,18,'Ahorra agua','Sistema de mangueras, goteros y conectores para riego eficiente.','water',1],
+ ['temporizador-digital','Temporizador digital','riego',12900,31,'Automatiza','Programador eléctrico para sistemas hortícolas, según capacidad nominal.','timer',0],
+ ['bomba-agua','Bomba sumergible compacta','riego',20900,13,'Hidro','Bomba de recirculación para pequeños sistemas de riego e hidroponía.','hydro',0],
+ ['medidor-ph','Medidor digital de pH','medicion',16900,19,'Precisión','Instrumento portátil de medición de pH para soluciones de riego.','meter',1],
+ ['higrometro','Termohigrómetro digital','medicion',10900,27,'Clima','Monitor digital de humedad y temperatura ambiental.','meter',0],
+ ['medidor-ec','Medidor EC/TDS','medicion',18900,12,'Control','Medidor portátil de conductividad eléctrica y sólidos disueltos.','meter',0],
+ ['tijeras-precision','Tijeras de precisión','herramientas',6500,46,'Esencial','Herramienta de corte para jardinería y mantenimiento de plantas.','tools',0],
+ ['pulverizador-1l','Pulverizador manual 1 L','herramientas',5900,34,'Uso diario','Pulverizador de presión manual para agua de jardinería y limpieza.','bottle',0],
+ ['semillas-feminizadas-3','Semillas feminizadas · Pack x3','genetica',19900,20,'Top selección','Selección de tres semillas de cannabis feminizadas en empaque individual sellado.','seeds',1],
+ ['semillas-automaticas-3','Semillas automáticas · Pack x3','genetica',17900,23,'Nuevo','Pack de tres semillas automáticas seleccionadas para el catálogo GrowLab.','seeds',1],
+ ['semillas-regulares-5','Semillas regulares · Pack x5','genetica',16900,18,'Clásico','Selección de cinco semillas regulares en presentación de colección.','seeds',0],
+ ['semillas-germinadas-2','Semillas germinadas · Pack x2','genetica',14500,16,'Edición especial','Dos semillas germinadas en contenedores individuales de transporte.','seedling',1],
+ ['plantin-cannabis-clasico','Plantín de cannabis · Classic Green','genetica',24900,14,'Plantines','Plantín joven presentado en maceta de vivero, variedad Classic Green.','seedling',0],
+ ['plantin-cannabis-purple','Plantín de cannabis · Purple Garden','genetica',28900,9,'Colección','Plantín joven de la línea Purple Garden en contenedor de vivero.','seedling',1],
+ ['kit-genetica-coleccion','Genetics Collection · Pack x6','genetica',32900,11,'Exclusivo','Pack de seis semillas seleccionadas en caja de colección GrowLab.','seeds',0],
+];
+module.exports = { categories, products };
